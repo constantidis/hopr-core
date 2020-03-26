@@ -14,7 +14,7 @@ Note that the documentation is under active development and does not always repr
   - [Dependencies](#dependencies)
   - [Prepare HOPR repositories](#prepare-hopr-repositories)
     - [Get hopr-core](#get-hopr-core)
-    - [Get hopr-ethereum](#get-hopr-ethereum)
+  - [Get hopr-ethereum](#get-hopr-ethereum)
   - [Start a local ethereum node](#start-a-local-ethereum-node)
   - [Deploy contracts](#deploy-contracts)
   - [Fund demo accounts](#fund-demo-accounts)
@@ -51,9 +51,14 @@ $ yarn install
 $ mv .env.example .env
 ```
 
-### Get hopr-ethereum
+## Get hopr-ethereum
+
+Once we are done with `hopr-core` we will do a similar process with `hopr-ethereum`.
 
 ```
+# go back to parent directory
+$ cd ..
+
 $ git clone -b develop https://github.com/hoprnet/hopr-ethereum.git
 $ cd hopr-ethereum
 
@@ -82,9 +87,14 @@ $ yarn migrate --network development
 
 ## Fund demo accounts
 
+HOPR uses HOPR to stake channels, we will proceed by funding our demo accounts with 100 HOPR each.
+
 In another terminal:
 
 ```
+# go back to parent directory
+$ cd ..
+
 $ cd hopr-core
 $ yarn fundAccounts
 ```
